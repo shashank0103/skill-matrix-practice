@@ -10,10 +10,10 @@ function App() {
     const formData = new FormData();
     formData.append("file", file);
 
-    const res = await axios.post("http://127.0.0.1:5000/upload", formData);
+    const res = await axios.post("https://skill-matrix-practice.onrender.com/upload", formData);
     setSkills(res.data.skills);
 
-    const q = await axios.post("http://127.0.0.1:5000/generate", {
+    const q = await axios.post("https://skill-matrix-practice.onrender.com/generate", {
       skills: res.data.skills,
     });
 
